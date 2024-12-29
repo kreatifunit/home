@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Hub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<link href="assets/css/fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="assets/img/logo.png" alt="My Logo" class="logo-img"></a>
+            <span class="company-name">Property Hub</span>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="navbar desktop-navbar">
+            <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navbar (Hidden by default) -->
+        <nav class="navbar mobile-navbar">
+            <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <!-- Search Bar (Moved here below the Hero Banner) -->
+    <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search hotel,Rental..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+		<!-- Provinces -->
+            <option value="">All Provinces</option>
+            <option value="gauteng">Gauteng</option>
+			<option value="limpopo">Limpopo</option>
+            <option value="kzn">KZN</option>
+            <option value="easterncape">Eastern Cape</option>
+            <option value="westerncape">Western Cape</option>
+            <option value="northerncape">Northern Cape</option>
+            <option value="mpumalanga">Mpumalanga</option>
+            <option value="freestate">Free State</option>
+            <option value="northwest">North West</option>
+            <!-- Add more categories as needed -->
+        </select>
+
+    </section>
+	
+    <!-- New Listing Section -->
+<div class="new-listing">
+    <h2>Featured Listings</h2>
+    <div class="gallery">
+	
+		<!--PRODUCT 1-->
+        <div class="gallery-item" data-category="easterncape">
+		<a href="properties/New Park Apartment.html">
+        <img src="properties/groups/Eastern Cape/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 4,500/pm</p>
+		<h3><strong>New Park Apartment</strong><h3>
+		<h4>Eastern Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 2-->
+		<div class="gallery-item" data-category="freestate">
+		<a href="properties/Melane Dune Apartment.html">
+        <img src="properties/groups/Free State/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 7,500/pm</p>
+		<h3><strong>Melane Dune Apartment</strong><h3>
+		<h4>Free State</h4></div>
+        </div>
+		
+		<!--PRODUCT 3-->
+		<div class="gallery-item" data-category="gauteng">
+		<a href="properties/Blue Moon Apartment.html">
+        <img src="properties/groups/Gauteng/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 6,000/pm</p>
+		<h3><strong>Blue Moon Apartment</strong><h3>
+		<h4>Gauteng</h4></div>
+        </div>
+		
+		<!--PRODUCT 4-->
+		<div class="gallery-item" data-category="kzn">
+		<a href="properties/Lake Palcid Apartment.html">
+        <img src="properties/groups/KwaZulu Natal/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 8,000/pm</p>
+		<h3><strong>Lake Palcid Apartment</strong><h3>
+		<h4>KwaZulu-Natal</h4></div>
+        </div>
+		
+		<!--PRODUCT 5-->
+		<div class="gallery-item" data-category="limpopo">
+		<a href="properties/Marula Ocean Apartment.html">
+        <img src="properties/groups/Limpopo/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 11,300/pm</p>
+		<h3><strong>Marula Ocean Apartment</strong><h3>
+		<h4>Limpopo</h4></div>
+        </div>
+		
+		<!--PRODUCT 6-->
+		<div class="gallery-item" data-category="mpumalanga">
+		<a href="properties/Demonth Luxury Apartment.html">
+        <img src="properties/groups/Mpumalanga/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 3,300/pm</p>
+		<h3><strong>Demonth Luxury Apartment</strong><h3>
+		<h4>Mpumalanga</h4></div>
+        </div>
+
+		<!--PRODUCT 7-->
+		<div class="gallery-item" data-category="northwest">
+		<a href="properties/Ditlou Cruise Apartment.html">
+        <img src="properties/groups/North West/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 4,000/pm</p>
+		<h3><strong>Ditlou Cruise Apartment</strong><h3>
+		<h4>North West</h4></div>
+        </div>
+		
+		<!--PRODUCT 8-->
+		<div class="gallery-item" data-category="northerncape">
+		<a href="properties/Tomas & Tammy Apartment.html">
+        <img src="properties/groups/Northern Cape/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 8,500/pm</p>
+		<h3><strong>Tomas & Tammy Apartment</strong><h3>
+		<h4>Northern Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 9-->
+		<div class="gallery-item" data-category="westerncape">
+		<a href="properties/Western Villa Apartment.html">
+        <img src="properties/groups/Western Cape/Apartments/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 9,200/pm</p>
+		<h3><strong>Western Villa Apartment</strong><h3>
+		<h4>Western Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 10-->
+		<div class="gallery-item" data-category="easterncape">
+		<a href="properties/Lavilla Villa Hotel.html">
+        <img src="properties/groups/Eastern Cape/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 1,200/night</p>
+		<h3><strong>Lavilla Villa Hotel</strong><h3>
+		<h4>Eastern Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 11-->
+		<div class="gallery-item" data-category="gauteng">
+		<a href="properties/Sky Hotel.html">
+        <img src="properties/groups/Gauteng/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 1,700/night</p>
+		<h3><strong>Sky Hotel</strong><h3>
+		<h4>Gauteng</h4></div>
+        </div>
+		
+		<!--PRODUCT 12-->
+		<div class="gallery-item" data-category="limpopo">
+		<a href="properties/Swift Hotel.html">
+        <img src="properties/groups/Limpopo/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 6,500/night</p>
+		<h3><strong>Swift Hotel</strong><h3>
+		<h4>Limpopo</h4></div>
+        </div>
+		
+		<!--PRODUCT 13-->
+		<div class="gallery-item" data-category="mpumalanga">
+		<a href="properties/Stanza Hotel.html">
+        <img src="properties/groups/Mpumalanga/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 2,600/night</p>
+		<h3><strong>Stanza Hotel</strong><h3>
+		<h4>Mpumalanga</h4></div>
+        </div>
+		
+		<!--PRODUCT 14-->
+		<div class="gallery-item" data-category="northwest">
+		<a href="properties/Junior Jack Hotel.html">
+        <img src="properties/groups/North West/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 4,600/night</p>
+		<h3><strong>Junior Jack Hotel</strong><h3>
+		<h4>North West</h4></div>
+        </div>
+		
+		<!--PRODUCT 15-->
+		<div class="gallery-item" data-category="northerncape">
+		<a href="properties/Landor Mill Hotel.html">
+        <img src="properties/groups/Northern Cape/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 1,100/night</p>
+		<h3><strong>Landor Mill Hotel</strong><h3>
+		<h4>Northern Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 16-->
+		<div class="gallery-item" data-category="westerncape">
+		<a href="properties/Hawaii Hotel Hotel.html">
+        <img src="properties/groups/Western Cape/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 3,100/night</p>
+		<h3><strong>Hawaii Hotel</strong><h3>
+		<h4>Western Cape</h4></div>
+        </div>
+		
+		<!--PRODUCT 17-->
+		<div class="gallery-item" data-category="freestate">
+		<a href="properties/Sucasa Hotel.html">
+        <img src="properties/groups/Free State/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 2,100/night</p>
+		<h3><strong>Sucasa Hotel</strong><h3>
+		<h4>Free State</h4></div>
+        </div>
+		
+		<!--PRODUCT 18-->
+		<div class="gallery-item" data-category="kzn">
+		<a href="properties/Lane Woods Hotel.html">
+        <img src="properties/groups/KwaZulu Natal/Hotels/Property001/1.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)"></a>
+        <div class="property-details">
+        <p><strong>Price:</strong> R 3,500/night</p>
+		<h3><strong>Lane Woods Hotel</strong><h3>
+		<h4>KwaZulu Natal</h4></div>
+        </div>
+		
+    </div>
+
+    <!-- Modal for viewing large image and additional images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modal-img" class="modal-content" src="" alt="Property Image">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+            <div id="modal-description" class="modal-description"></div>
+        </div>
+    </div>
+	
+	<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/logo.png" alt="Company Logo" class="footer-logo-img">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#why-choose-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Property Hub. All Rights Reserved.</p>
+    </div>
+</footer>
+
+	<script src="assets/js/properties.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

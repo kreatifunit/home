@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Western Villa Apartment</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+	<link href="../assets/css/fontawesome/css/all.css" rel="stylesheet">
+	<link href="../assets/css/product.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+		<a href="../index.html">
+            <img src="../assets/img/logo.png" alt="My Logo" class="logo-img"></a>
+            <span class="company-name">Property Hub</span>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="navbar desktop-navbar">
+         <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../properties.html">Properties</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+        </nav>
+
+        <!-- Mobile Navbar (Hidden by default) -->
+        <nav class="navbar mobile-navbar">
+            <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../properties.html">Properties</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+	 
+    <div class="product-container">
+    <div class="product-images">
+    <div class="main-image">
+    <img id="mainImage" src="../properties/groups/Eastern Cape/Hotels/Property001/1.jpg" alt="Product Image"></div>
+    <div class="thumbnail-images">
+	<img class="thumbnail" src="../properties/groups/Eastern Cape/Hotels/Property001/1.jpg" alt="Product Thumbnail" onclick="changeImage('../properties/groups/Eastern Cape/Hotels/Property001/1.jpg')">
+    <img class="thumbnail" src="../properties/groups/Eastern Cape/Hotels/Property001/1_2.jpg" alt="Product Thumbnail" onclick="changeImage('../properties/groups/Eastern Cape/Hotels/Property001/1_2.jpg')">
+    <img class="thumbnail" src="../properties/groups/Eastern Cape/Hotels/Property001/1_3.jpg" alt="Product Thumbnail" onclick="changeImage('../properties/groups/Eastern Cape/Hotels/Property001/1_3.jpg')">
+    </div></div>
+       
+    <div class="product-specifications">
+  <h2>Western Villa Apartment</h2>
+  <h4>1 Bedroom Apartment</h4>
+  <ul>
+    <li><strong>Location:</strong> Eastern Cape</li>
+    <li><strong>Type:</strong> 1 Bedroom Apartment</li>
+    <li><strong>Features:</strong>
+      <ul>
+        <li>Spacious & bright living area</li>
+        <li>Dedicated parking spot</li>
+        <li>High-speed WiFi</li>
+        <li>Self-catering kitchen</li>
+      </ul>
+    </li>
+    <li><strong>Rent:</strong> R1,200/pm</li>
+    <li><strong>Contact:</strong> Sello, 072 696 2588</li>
+  </ul>
+  
+  <!-- Star Rating -->
+  <div class="star-rating">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="far fa-star"></i> <!-- Empty star for 4/5 rating -->
+  </div>
+  
+  <!-- AGENT PROFILE PIC -->
+  <div class="profile-container">
+    <img class="profile-pic" src="../assets/img/agent/1.jpg" alt="Agent Profile Picture">
+    <!-- Call button under the profile picture -->
+    <a href="tel:+27726962588" class="call-btn">Call Sello</a>
+  </div>
+</div>
+</div>
+
+       <section class="testimonials">
+	   <h2>Customer Review</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-slide">
+                <p class="quote">"The apartment was wonderful! Great location and very spacious. 
+				I loved the self-catering kitchen. Will definitely book again!"</p>
+                <p class="author">- Thembi Seleka</p>
+				⭐⭐⭐☆☆ (3/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"Professional, efficient, and reliable. Highly recommended!"</p>
+                <p class="author">- Sello Motswi</p>
+				⭐⭐⭐⭐☆ (4/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"Fantastic stay! The place is cozy, clean, and has everything you need.
+				The host was really helpful and friendly. Highly recommend!"</p>
+                <p class="author">- Mark Johnson</p>
+				⭐⭐⭐⭐⭐ (5/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"The cocktails at the hotel bar are absolutely fantastic! The mixologist really knows their stuff. 
+				My favorite was the classic Mojito—perfectly balanced with a refreshing kick"</p>
+                <p class="author">- Precious Mungomezulu</p>
+				⭐⭐⭐☆☆ (3/5)
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">&#10094;</button>
+            <button id="nextBtn" class="control-btn">&#10095;</button>
+        </div>
+        </section>
+
+
+	
+    <!-- Modal for viewing large image and additional images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modal-img" class="modal-content" src="" alt="Property Image">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+            <div id="modal-description" class="modal-description"></div>
+        </div>
+    </div>
+	
+	<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+			<a href="../index.html">
+            <img src="../assets/img/logo.png" alt="Company Logo" class="footer-logo-img"></a>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#why-choose-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Property Hub. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="../assets/js/script.js"></script>
+	<script src="../assets/js/product.js"></script>
+	
+</body>
+</html>
