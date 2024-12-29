@@ -1,0 +1,637 @@
+/*---TRADEMARK SECTION---*/
+    /* The pop-up container */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Pop-up content box */
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 60%;
+      max-width: 600px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Close button style */
+    .close-btn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    /* Styling the content */
+    .popup h2 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .popup p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .popup .contact-info {
+      font-size: 14px;
+      color: #444;
+      margin-top: 20px;
+    }
+
+    .popup .contact-info a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent; /* Transparent background for desktop */
+    color: white;
+    position: absolute; /* Fixed position for header on desktop */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+/* Logo */
+.logo a {
+    display: inline-block;
+}
+
+.logo img {
+    width: 100px;  /* Adjust logo width as needed */
+    height: auto;   /* Maintain aspect ratio */
+}
+
+/* Navbar */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+	font-weight: bold;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.15);
+}
+
+.navbar ul li a:hover {
+    color: #ff5722;
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 30px;
+}
+
+/* Mobile Menu Icon (Hamburger) */
+.mobile-menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100px; /* Adjust if you have a different header height */
+    right: 0;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.mobile-menu ul li a:hover {
+    color: #ff5722;
+}
+
+/* Mobile Menu Active State */
+header.active .navbar,
+header.active .search-bar {
+    display: none; /* Hide navbar and search bar when mobile menu is active */
+}
+
+.mobile-menu.active {
+    display: block; /* Show mobile menu when active */
+}
+
+/* Media Queries for Desktop and Small Screen (Mobile) */
+
+/* For desktop: Keep the header transparent and fixed */
+@media screen and (min-width: 1024px) {
+    body {
+        padding-top: 0px;  /* Space for fixed header */
+    }
+
+    header {
+        background-color: transparent; /* Keep the header transparent */
+        box-shadow: none; /* No shadow for desktop */
+    }
+
+    .slideshow-container {
+        height: 100vh; /* Full viewport height for slideshow */
+    }
+
+    .overlay h1 {
+        font-size: 2.5rem;  /* Larger font size for desktop */
+    }
+
+    .overlay p {
+        font-size: 1.2rem; /* Larger text for desktop */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+
+/* For mobile (small screen): Header background becomes black */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 0;  /* No padding needed for mobile */
+    }
+
+    header {
+        position: fixed; /* Static header for mobile */
+        background-color: black; /* Black background for mobile */
+        box-shadow: none; /* Optional: Add box shadow if desired */
+    }
+
+    .navbar {
+        display: none; /* Hide navbar on small screens */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+    
+    .mobile-menu ul li a {
+        font-size: 18px;
+    }
+
+    .search-bar input {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Adjust slideshow height on mobile */
+    .slideshow-container {
+        margin-top: 100px;
+    }
+
+    .overlay h1 {
+        font-size: 1.8rem; /* Smaller font for mobile */
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    /* Adjust CTA button size for mobile */
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+/* -----HEADER SLIDERS BEGIN-----*/
+
+/* Container for the slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Each slide container */
+.slide {
+    position: relative;
+    display: none; /* Hide all slides by default */
+}
+
+/* Show each slide when active (fade in/out effect can be added here with JavaScript) */
+.slide.fade {
+    display: block; /* Will be toggled by JavaScript */
+}
+
+/* Image styling */
+.slide img {
+    width: 100%; /* Make image fill the container */
+    height: 100%;  /* Make the images cover the full height of the container */
+    object-fit: cover;  /* Ensures the image covers the area without stretching */
+    display: block; /* Remove unwanted space below images */
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure the overlay is on top of the image */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent black background */
+    border-radius: 10px;
+}
+
+/* Heading and paragraph styles */
+.overlay h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Font size for larger screens (desktop) */
+@media screen and (min-width: 1024px) {  /* Desktop and larger screens */
+    .overlay h1 {
+        font-size: 2.5rem;  /* Larger size for desktop */
+    }
+}
+
+.overlay p {
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+/* CTA button styling */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722; /* Customize button color */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* CTA button hover effect */
+.cta-button:hover {
+    background-color: #e64a19; /* Darken the button color on hover */
+}
+
+/* -----Features Section----- */
+.features {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.feature-item {
+    margin: 20px 0;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+	margin-bottom: 50px;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.feature-image {
+	border-radius: 8px;
+}
+
+/* Default (Mobile-first) Styles */
+.features .container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features .feature-item {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.features .feature-image {
+    width: 100%;   /* Make images responsive */
+    max-width: 300px;  /* Optional: Set a maximum size */
+    height: auto;  /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+/* Desktop Styles (Screen width >= 1024px) */
+@media (min-width: 1024px) {
+    .features .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between items */
+        padding: 40px;
+    }
+
+    .features .feature-item {
+        text-align: left;
+        margin-bottom: 0; /* Remove bottom margin for grid layout */
+    }
+
+    .features .feature-image {
+        max-width: 100%;  /* Ensure image scales well */
+        margin-bottom: 20px; /* Adjust space between image and text */
+    }
+}
+
+
+/* -----Testimonials Section----- */
+.testimonials {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-item {
+    margin: 20px 0;
+    font-style: italic;
+    color: #444;
+}
+
+/* -----Pricing Section----- */
+.pricing {
+    background-color: #ff5722;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.pricing-option {
+    background-color: #e64a19;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 280px;
+    text-align: center;
+}
+
+.pricing-option h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.pricing-option p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.pricing-option ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-option ul li {
+    margin: 10px 0;
+}
+
+.pricing-option .cta-button {
+    background-color: #ff9100;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.pricing-option .cta-button:hover {
+    background-color: #e67e00;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container {
+    margin: 20px 0;
+    text-align: center;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+	margin-bottom: 50px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #e64a19;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-media h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media ul li {
+    display: inline-block;
+}
+
+.social-media ul li a img {
+    width: 40px;  /* Set the size of the social media icons */
+    height: auto;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.social-media ul li a:hover img {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+
+/* -----Footer Section----- */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer .footer-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-nav ul li a:hover {
+    color: #ff5722;
+}
