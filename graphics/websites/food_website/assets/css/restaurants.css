@@ -1,0 +1,737 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+header {
+    position: fixed; /* Keeps the header fixed to the top */
+    top: 0;
+    left: -15px;
+    width: 100%;
+    background-color: rgb(14, 59, 2);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Centers the content horizontally */
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000; /* Keeps the header above other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+}
+
+/*Footer Bar Icon*/
+
+/* Footer styling */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(14, 59, 2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000; /* Keeps footer above other content */
+}
+
+/* Footer icons container */
+.footer-icons {
+    display: flex;
+    gap: 50px;
+}
+
+/* Individual icon styling */
+.footer-icon img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s;
+}
+
+.footer-icon img:hover {
+    opacity: 0.8;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+}
+
+.footer-icon {
+    text-align: center; /* Center align text under icons */
+    color: white; /* Change to desired text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-icon span {
+    display: block; /* Ensure the span is block-level */
+    margin-top: 5px; /* Space between icon and title */
+    font-size: 8px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 5px;
+    }
+    
+    .footer-icons {
+        gap: 50px;
+    }
+    
+    .footer-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.hamburger, .cart-icon, .close {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu {
+    position: fixed;
+    left: -250px; /* Hide off-screen */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(14, 59, 2);
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.menu .close {
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu.show {
+    left: 0; /* Slide in */
+}
+
+.restaurant-profile {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+/* Resize and style for the restaurant logo */
+.restaurant-logo {
+    max-width: 200px;   /* Limit the width of the logo */
+    height: auto;       /* Maintain aspect ratio */
+    display: block;     /* Make logo behave like a block element */
+    margin: 0 auto;     /* Center the logo horizontally */
+}
+
+header h1, header .cuisine-type, header .rating {
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Restaurant Info Section */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+.restaurant-name {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cuisine-type, .rating {
+    font-size: 1.1rem;
+    color: #777;
+	justify-content: center;
+	display: flex;
+}
+
+.restaurant-info {
+    margin-top: 20px;
+	padding: 50px;
+}
+
+.restaurant-info div {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Container for the filter section */
+.filters {
+    display: flex;
+    flex-direction: row; /* Horizontal layout by default */
+    justify-content: center; /* Space between select elements (removed in the next step) */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* For individual filter items */
+.filter-item {
+    display: flex;
+    flex-direction: column; /* Stack label on top of select */
+    align-items: flex-start; /* Align items to the left */
+    width: 200px; /* Width of each filter box */
+    margin-right: 0; /* Remove space between filter boxes */
+    margin-bottom: 20px; /* Add margin between rows when wrapping (vertical space) */
+}
+
+/* Label styles */
+.filters label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px; /* Space between label and select */
+    color: #333;
+}
+
+/* Select box styles */
+.filters select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+.filters select:focus {
+    border-color: rgb(14, 59, 2);
+    outline: none;
+}
+
+/* Media Query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Switch to vertical layout */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .filter-item {
+        margin-right: 0;
+        width: 100%; /* Full width for each filter on mobile */
+    }
+
+    .filters label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .filters select {
+        font-size: 0.9rem;
+        padding: 8px;
+        width: 100%; /* Make select boxes full width */
+        margin-bottom: 15px; /* Add margin between elements */
+    }
+}
+
+/* Additional styling for very small screens (e.g., phones) */
+@media (max-width: 480px) {
+    .filters {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .filters label {
+        font-size: 0.9rem;
+    }
+
+    .filters select {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+}
+
+.contact a {
+    text-decoration: none;
+	color: grey;
+}
+
+	
+.search-filter {
+	display: flex;
+	justify-content: center; 
+	padding: 20px;
+}	
+	
+#searchInput {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#categoryFilter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Popular Dishes Section */
+.popular-dishes {
+    margin-top: 40px;
+}
+
+.popular-dishes h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.product {
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    display: flex; /* Use Flexbox for side-by-side layout */
+    align-items: center; /* Center items vertically */
+	justify-content: center;
+}
+
+.dish-info {
+    flex: 1; /* This will take up available space on the left */
+    max-width: 70%; /* Limit width of the text content */
+	
+}
+
+.dish h3 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.dish p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+    color: rgb(14, 59, 2);
+}
+
+.rating {
+    color: #ff9800;
+}
+
+.dish-image {
+    max-width: 155px; /* Limit image width */
+    margin-left: 20px; /* Add space between text and image */
+    border-radius: 8px;
+    object-fit: cover; /* Ensure proper image aspect ratio */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.add-to-cart-button {
+    background-color: rgb(14, 59, 2); /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+	
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 20px;
+    padding: 20px;
+	margin-top: 10px; /* Adjust margin to match header height */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .producto {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    }
+}
+
+
+/* Special Offers Section */
+.special-offers {
+    margin-top: 40px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.special-offers h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.offer {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.offer strong {
+    color: #2a9d8f;
+}
+
+/* Menu Categories Section */
+.menu-categories {
+    margin-top: 40px;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+	justify-content: center;
+	display: flex;
+}
+
+.menu-categories ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-categories li {
+    margin-bottom: 15px;
+}
+
+.menu-categories a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #2a9d8f;
+    transition: color 0.3s;
+}
+
+.menu-categories a:hover {
+    color: #e76f51;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+    margin-top: 40px;
+}
+
+.customer-reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.review-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.review-rating {
+    font-size: 1.2rem;
+    color: #ff9800;
+}
+
+/* About Us Section */
+.about-us {
+    margin-top: 40px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Order Button */
+.order-now {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.order-btn {
+    background-color: #2a9d8f;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #e76f51;
+}
+
+/* Images for Menu Categories */
+.menu-categories a {
+    display: block;
+    padding-left: 30px;
+    background-image: url('menu-icon.jpg'); /* Replace 'menu-icon.jpg' with actual image */
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.menu-categories li {
+    position: relative;
+    padding-left: 40px; /* Add padding for the icon */
+}
+
+.menu-categories li a {
+    padding-left: 10px; /* Adjust the space between text and icon */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .restaurant-profile {
+        width: 95%;
+    }
+
+    .restaurant-name {
+        font-size: 2rem;
+    }
+
+    .popular-dishes h2, .special-offers h2, .menu-categories h2, .customer-reviews h2, .about-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .order-btn {
+        width: 100%;
+    }
+}
+
+/* Basic modal styling */
+.modal {
+	margin-top: 57px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button {
+    background-color: rgb(14, 59, 2); /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #218838; /* Darker red on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Cart items and summary */
+.cart-summary {
+    margin-top: 20px;
+}
+
+.cart-total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Checkout form */
+.billing-address input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-methods label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+        
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.cart-item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.cart-item-name {
+    flex-grow: 1;  /* This ensures the name takes available space */
+}
+
+.quantity-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;  /* Set a fixed width for the buttons */
+    height: 30px; /* Set a fixed height for uniform buttons */
+    font-size: 16px; /* Optional: change font size if needed */
+    margin: 0 5px; /* Space between buttons */
+    padding: 0;
+    cursor: pointer;
+}
+
+.cart-item-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.cart-item-buttons button {
+    padding: 5px 10px;
+}
+
+.cart-button {
+    background-color: rgb(14, 59, 2); /* Green background */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Add some space between buttons */
+    width: calc(100% - 20px); /* Full width with padding */
+}
+
+/* Button styling */
+.toggle-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.toggle-button:hover {
+    background-color: #45a049;
+}
+
+/* Section styling (they will be hidden by default) */
+.filters, .featured-items {
+    display: none; /* Hidden by default */
+}
+
+.no-results-message {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+}
+
+h4 {
+    font-weight: bold; /* Makes the text bold */
+    color: green;      /* Sets the text color to green */
+}
+
