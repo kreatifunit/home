@@ -121,7 +121,7 @@
         }
 
         .pricing-card .cta button {
-            background-color: #4CAF50;
+            background-color:  #ff5722;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -132,7 +132,7 @@
         }
 
         .pricing-card .cta button:hover {
-            background-color: #45a049;
+            background-color: #e64a19;
         }
 
         @media (max-width: 768px) {
