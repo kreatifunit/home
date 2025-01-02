@@ -239,6 +239,29 @@
 
 
     <script src="assets/js/script.js"></script>
+	
+	<script>
+function sendToWhatsApp(planName, price, features) {
+    // Prepare the message to send
+    let message = `Hello, I am interested in the ${planName}. Here are the details I would like to inquire about:
+    - Price: ${price}
+    - Features:`;
+
+    features.forEach(feature => {
+        message += `\n  - ${feature}`;
+    });
+
+    // URL encode the message to ensure it works in the WhatsApp URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp link with your phone number and the encoded message
+    const phoneNumber = "+27726962588"; // Replace with the desired WhatsApp number
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(url, "_blank");
+}
+</script>
 
 <!-- WhatsApp Chat Widget -->
     <div id="whatsapp-widget">
