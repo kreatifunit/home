@@ -9,7 +9,7 @@
     <meta property="og:title" content="Creative Poster Designs | Kreatifunit Studio">
     <meta property="og:description" content="Browse our gallery of custom poster designs created to enhance your brand and marketing efforts.">
     <meta property="og:image" content="assets/img/logo.png">
-    <meta property="og:url" content="https://creativeunitstudio.github.io/home/posters.html">
+    <meta property="og:url" content="https://kreatifunit.github.io/home/posters.html">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Creative Poster Designs | Kreatifunit Studio">
     <meta name="twitter:description" content="Explore our unique and creative poster designs that elevate your branding and marketing.">
@@ -120,52 +120,82 @@
 </section>
 
 	<h1>Pricing Table</h1>
-		<div class="pricing-table">
-        <!-- Basic Plan -->
-        <div class="pricing-card">
-            <h2 class="plan-name">Basic Poster Design</h2>
-            <div class="price">$49</div>
-            <ul class="features">
-                <li>1 Custom Poster Design</li>
-                <li>High-Resolution File</li>
-                <li>2 Revision Rounds</li>
-            </ul>
-            <div class="cta">
-                <button onclick="alert('You selected the Basic Plan!')">Choose Plan</button>
-            </div>
-        </div>
-
-        <!-- Standard Plan -->
-        <div class="pricing-card">
-            <h2 class="plan-name">Standard Poster Design</h2>
-            <div class="price">$99</div>
-            <ul class="features">
-                <li>2 Custom Poster Designs</li>
-                <li>High-Resolution Files</li>
-                <li>5 Revision Rounds</li>
-                <li>Additional Consultation</li>
-            </ul>
-            <div class="cta">
-                <button onclick="alert('You selected the Standard Plan!')">Choose Plan</button>
-            </div>
-        </div>
-
-        <!-- Premium Plan -->
-        <div class="pricing-card">
-            <h2 class="plan-name">Premium Poster Design</h2>
-            <div class="price">$149</div>
-            <ul class="features">
-                <li>5 Custom Poster Designs</li>
-                <li>High-Resolution Files</li>
-                <li>Unlimited Revisions</li>
-                <li>Priority Support</li>
-                <li>Free Branding Consultation</li>
-            </ul>
-            <div class="cta">
-                <button onclick="alert('You selected the Premium Plan!')">Choose Plan</button>
-            </div>
+<div class="pricing-table">
+    <!-- Basic Plan for Poster Design -->
+    <div class="pricing-card">
+        <h2 class="plan-name">Basic Poster Design</h2>
+        <div class="price">R199</div>
+        <ul class="features">
+            <li>1 Custom Poster or Menu Designs</li>
+            <li>1 Revision Round</li>
+			<li>Optimized for Print</li>
+            <li>High-Resolution JPG & PDF File</li>
+           <li>Standard Delivery (1 Day)</li>
+        </ul>
+        <div class="cta">
+            <button onclick="sendToWhatsApp('Basic Poster Design', 'R199', [
+                '1 Custom Poster or Menu Designs', 
+                '1 Revision Round', 
+                'High-Resolution JPG & PDF File', 
+                'Standard Delivery (1 Day)'
+            ])">Choose Plan</button>
         </div>
     </div>
+
+    <!-- Standard Plan for Menu Design -->
+    <div class="pricing-card">
+        <h2 class="plan-name">Standard Menu Design</h2>
+        <div class="price">R249</div>
+        <ul class="features">
+            <li>1 Custom Poster or Menu Designs</li>
+            <li>3 Revision Rounds</li>
+            <li>High-Resolution JPG & PDF Files</li>
+            <li>Optimized for Print and Social Media</li>
+			<li><strong>2 Resolutions Formats</strong></li>
+            <li>Potrait Designs & Square</li>
+            <li>Priority Delivery (1 - 2 Business Days)</li>
+        </ul>
+        <div class="cta">
+            <button onclick="sendToWhatsApp('Standard Menu Design', 'R249', [
+                '1 Custom Poster or Menu Designs', 
+                '3 Revision Rounds', 
+                'High-Resolution JPG & PDF Files',
+				'Optimized for Print and Social Media',
+				'2 Resolutions Formats'
+				'Potrait Designs & Square' 
+                'Priority Delivery (1 - 2 Business Days)'
+            ])">Choose Plan</button>
+        </div>
+    </div>
+
+    <!-- Premium Plan for Poster + Menu Design -->
+    <div class="pricing-card">
+        <h2 class="plan-name">Premium Poster & Menu Design</h2>
+        <div class="price">R399</div>
+        <ul class="features">
+            <li>3 Custom Poster or Menu Designs</li>
+            <li>5 Revision Rounds</li>
+            <li>High-Resolution JPG, PDF & Animation (Video) Files</li>
+            <li>Optimized for Print and Social Media</li>
+            <li><strong>3 Resolutions Formats</strong></li>
+            <li>Potrait Designs, Landscape & Square</li>
+            <li>Free Logo Design</li>
+			<li>Priority Delivery (3 - 5 Business Days)</li>
+        </ul>
+        <div class="cta">
+            <button onclick="sendToWhatsApp('Premium Poster & Menu Design', 'R399', [
+                '3 Custom Poster or Menu Designs', 
+                '5 Revision Rounds', 
+                'High-Resolution JPG, PDF & Animation (Video) Files', 
+                'Optimized for Print and Social Media', 
+                '3 Resolutions Formats', 
+                'Potrait Designs, Landscape & Square', 
+                'Free Logo Design'
+				'Priority Delivery (3 - 5 Business Days)'
+            ])">Choose Plan</button>
+        </div>
+    </div>
+</div>
 
 <!-- FAQ Sectin -->
 	<h1>Frequently Asked Questions (FAQs)</h1>
@@ -174,41 +204,43 @@
         <!-- FAQ 1 -->
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(0)">
-                <span>What is your return policy?</span>
+                <span>How long does it take to complete the design?</span>
                 <span>&#9660;</span>
             </div>
             <div class="faq-answer">
-                We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in their original packaging. Please contact customer service to initiate your return.
+                Depending on the type of design, it may take 3 - 5 days maximum to get the job done. Take into consideration that a menu design
+				will take a bit longer to complete compared to a poster.
             </div>
         </div>
         <!-- FAQ 2 -->
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(1)">
-                <span>How long does shipping take?</span>
+                <span>Do you offer a printout?</span>
                 <span>&#9660;</span>
             </div>
             <div class="faq-answer">
-                Standard delivery takes 3-5 business days. Expedited shipping options are available at checkout for faster delivery.
+                We are working on a system to include printout, currently all our designs are delivered digitally.
             </div>
         </div>
         <!-- FAQ 3 -->
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(2)">
-                <span>Do you offer international shipping?</span>
+                <span>What files will I receive with my logo?</span>
                 <span>&#9660;</span>
             </div>
             <div class="faq-answer">
-                Yes, we offer international shipping to most countries. Shipping fees and estimated delivery times vary by location and will be shown during checkout.
+                Once the design is completed and the final payment is made, you will receive the design in various formats depending on the chosen plan, including high-resolution JPG, PDF, files. 
             </div>
         </div>
         <!-- FAQ 4 -->
         <div class="faq-item">
             <div class="faq-question" onclick="toggleAnswer(3)">
-                <span>How can I track my order?</span>
+                <span>How do I make Payments?</span>
                 <span>&#9660;</span>
             </div>
             <div class="faq-answer">
-                Once your order is shipped, you will receive a confirmation email with a tracking number and a link to track your package.
+                For each design, a 50% deposit is required before hand, once the job is done you will recieve a demo design to review then make 
+				final transatction of remaining 50%.
             </div>
         </div>
         <!-- FAQ 5 -->
@@ -218,7 +250,7 @@
                 <span>&#9660;</span>
             </div>
             <div class="faq-answer">
-                Yes, we have physical stores in select cities. Please visit our store locator page to find a store near you.
+                We are a digital platform with no physical store, yet.
             </div>
         </div>
     </div>
@@ -237,6 +269,29 @@
 
     <script src="assets/js/script.js"></script>
 	
+	<script>
+function sendToWhatsApp(planName, price, features) {
+    // Prepare the message to send
+    let message = `Hello, I am interested in the ${planName}. Here are the details I would like to inquire about:
+    - Price: ${price}
+    - Features:`;
+
+    features.forEach(feature => {
+        message += `\n  - ${feature}`;
+    });
+
+    // URL encode the message to ensure it works in the WhatsApp URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp link with your phone number and the encoded message
+    const phoneNumber = "+27726962588"; // Replace with the desired WhatsApp number
+    const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp with the message
+    window.open(url, "_blank");
+}
+</script>
+	
 	<!-- WhatsApp Chat Widget -->
     <div id="whatsapp-widget">
         <a href="https://wa.me/27726962588" target="_blank" id="whatsapp-link">
@@ -252,7 +307,7 @@
     
     <footer>
         <div class="container">
-        <p>&copy; 2025<strong><a href="https://m.facebook.com/creativeunitstudioza/" 
+        <p>&copy; 2025 <strong><a href="https://www.facebook.com/kreatifunit/" 
 		style="color: white; text-decoration: none;">Kreatifunit Studio</a></strong></p> 
         </div>
     </footer>
