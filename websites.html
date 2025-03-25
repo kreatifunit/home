@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore creative and responsive website designs at Kreatifunit Studio. We specialize in custom web design solutions for your brand.">
+    <meta name="keywords" content="web design, custom websites, creative websites, professional websites, responsive web design, website development">
+    <meta name="author" content="Kreatifunit Studio">
+    <meta property="og:title" content="Creative Website Designs | Kreatifunit Studio">
+    <meta property="og:description" content="Explore our portfolio of unique and responsive website designs crafted for your brand.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:url" content="https://kreatifunit.github.io/home/websites.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Creative Website Designs | Kreatifunit Studio">
+    <meta name="twitter:description" content="Explore our portfolio of unique and responsive website designs crafted for your brand.">
+    <meta name="twitter:image" content="assets/img/logo.png">
+
+    <title>Website Design Portfolio | Kreatifunit Studio</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/Logo.png" alt="Logo" class="logo"></a>
+    </header>
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="logos.html">Logo Designs</a></li>
+            <li><a href="posters.html">Poster Designs</a></li>
+			<li><a href="websites.html">Websites Designs</a></li>
+			<li><a href="index.html#services">Services</a></li>
+			<li><a href="index.html#promotions">Promotions</a></li>
+			<li><a href="index.html#contactForm">Contact Us</a></li>
+			<li><a href="index.html#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!---REMAINS HIDDEN--->
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+			<option value="logos">Logos</option>
+            <option value="posters">Posters</option>
+			<option value="websites">Websites</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+	<h1>Websites</h1>
+        <section class="products">
+	<!---PRODUCT 14--->
+    <div class="product" data-category="car_lights">
+	<a href="graphics/websites/clothing_website/index.html">
+    <img src="graphics/websites/clothing_site.jpg" 
+	alt="Product 14" class="product-image" id="productImag14"></a>
+	</div>
+	
+	<!---PRODUCT 14--->
+    <div class="product" data-category="car_lights">
+	<a href="graphics/websites/fitness_website/index.html">
+    <img src="graphics/websites/fitness_site.jpg" 
+	alt="Product 14" class="product-image" id="productImag14"></a>
+	</div>
+	
+	<!---PRODUCT 14--->
+    <div class="product" data-category="car_lights">
+	<a href="graphics/websites/food_website/index.html">
+    <img src="graphics/websites/food_site.jpg" 
+	alt="Product 14" class="product-image" id="productImag14"></a>
+	</div>
+	
+	<!---PRODUCT 14--->
+    <div class="product" data-category="car_lights">
+	<a href="graphics/websites/property_website/index.html">
+    <img src="graphics/websites/property_site.jpg" 
+	alt="Product 14" class="product-image" id="productImag14"></a>
+	</div>
+	
+</section>
+
+
+	<h1>Pricing Table</h1>
+		<div class="pricing-table">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+            <h2 class="plan-name">Basic Website Design</h2>
+            <div class="price">R599</div>
+            <ul class="features">
+                <li>1 Page Static Website</li>
+                <li>Excluding E-commerce Site</li>
+                <li>Search Engine Optimized</li>
+				<li>Android Application (Ads)</li>
+				<li>Monthly Maintenance Fee</li>
+				<li>15 days trial</li>
+            </ul>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="pricing-card">
+            <h2 class="plan-name">Standard Website Design</h2>
+            <div class="price">R999</div>
+            <ul class="features">
+                <li>2 Custom Poster Designs</li>
+                <li>High-Resolution Files</li>
+                <li>5 Revision Rounds</li>
+                <li>Additional Consultation</li>
+				<li>Android Application</li>
+				<li>15 days trial</li>
+            </ul>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card">
+            <h2 class="plan-name">Premium Website Design</h2>
+            <div class="price">R2499</div>
+            <ul class="features">
+                <li>5 Custom Poster Designs</li>
+                <li>High-Resolution Files</li>
+                <li>Unlimited Revisions</li>
+                <li>Priority Support</li>
+                <li>Free Branding Consultation</li>
+				<li>Android Application</li>
+				<li>30 days trial</li>
+            </ul>
+        </div>
+    </div>
+	
+			<!-- FAQ Sectin -->
+<h1>Frequently Asked Questions (FAQs)</h1>
+<div id="faqs">
+  <div class="faq-container">
+    <!-- FAQ 1 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(0)">
+        <span>What is your design process?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        Our design process begins with a discovery phase, where we learn about your brand, goals, and vision. After that, we create initial concepts and refine them based on your feedback. We collaborate closely to ensure the final design meets your expectations and communicates your brand effectively.
+      </div>
+    </div>
+    
+    <!-- FAQ 2 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(1)">
+        <span>How long does it take to complete a logo or graphic design project?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        The timeline varies depending on the scope of the project. Typically, a logo design can take 1-2 weeks, while larger projects like brand identity packages or promotional designs may take 3-4 weeks. We will provide an estimated timeline at the start of the project.
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(2)">
+        <span>Can I request revisions to my design?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        Absolutely! We offer revisions to ensure the design aligns with your vision. After presenting the initial design, we allow up to 2 rounds of revisions. If additional revisions are needed, we can discuss further adjustments based on the project.
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(3)">
+        <span>What file formats do you provide for the final design?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        We provide the final design in various formats, including .AI (Adobe Illustrator), .EPS, .PNG, .JPEG, and .PDF. If you have a specific format request, feel free to let us know, and we will accommodate it.
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(4)">
+        <span>How much do your design services cost?</span>
+        <span>&#9660;</span>
+      </div>
+      <div class="faq-answer">
+        The cost of design services depends on the complexity and scope of the project. We offer customized pricing based on your specific needs. Please contact us to discuss your project, and we’ll provide a detailed quote.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Modal for Viewing Image -->
+  <div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+    </main> 
+
+
+    <script src="assets/js/script.js"></script>
+
+<!-- WhatsApp Chat Widget -->
+    <div id="whatsapp-widget">
+        <a href="https://wa.me/27726962588" target="_blank" id="whatsapp-link">
+            <img src="assets/img/contacticons/whatsapp.png" alt="WhatsApp Chat">
+        </a>
+    </div>
+	<!-- Contact Widget -->
+    <div id="contact-widget">
+        <a href="tel:+27726962588" target="_blank" id="contact-link">
+            <img src="assets/img/contacticons/contact.png" alt="Contact">
+        </a>
+    </div>	
+    
+    <footer>
+        <div class="container">
+        <p>&copy; 2025 <strong><a href="https://www.facebook.com/kreatifunit/" 
+		style="color: white; text-decoration: none;">Kreatifunit Studio</a></strong></p> 
+        </div>
+    </footer>
+</body>
+</html>
