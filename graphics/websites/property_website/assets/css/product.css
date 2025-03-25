@@ -1,0 +1,281 @@
+/* General Reset */
+* {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    justify-content: center;
+	margin-top: 150px;
+}
+
+.product-images {
+    flex: 1;
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+	border-radius: 15px;
+}
+
+.thumbnail-images {
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+	border-radius: 10px;
+}
+
+.thumbnail:hover {
+    border-color: #333;
+}
+
+.product-details {
+    flex: 1;
+	
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+p {
+    font-size: 35px;
+    margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	color: #333;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.stock-info {
+    margin-bottom: 20px;
+}
+.paragraph-text {
+    text-size-adjust: 5px;
+    margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	color: #333;
+}
+
+.profile-container {
+  text-align: center; /* Centers the content inside the container */
+  margin-top: 20px; /* Adds space between the description and profile picture */
+}
+
+.profile-pic {
+  width: 100px; /* Set profile picture width */
+  height: auto;
+  border-radius: 50%; /* Makes the image round */
+  display: block; /* Ensures the image is treated as a block-level element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.call-btn {
+  display: inline-block; /* Ensures the button is treated as an inline-block element */
+  margin-top: 15px; /* Adds space between the image and button */
+  padding: 10px 20px; /* Adds padding to the button */
+  background-color: black;
+  color: white; /* White text */
+  text-decoration: none; /* Removes underline from link */
+  border-radius: 5px; /* Rounded corners for the button */
+  font-size: 16px; /* Text size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.call-btn:hover {
+  background-color: rgb(194, 136, 0);
+}
+
+.star-rating {
+  margin-top: 5px; /* Adds space between the other content and the stars */
+  
+}
+
+.star-rating i {
+  color: gold; /* Makes the stars gold */
+  font-size: 20px; /* Sets the size of the stars */
+  margin-right: 5px; /* Adds space between the stars */
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: rgb(219, 218, 218); /* Dark background color */
+    color: rgb(182, 179, 179); /* White text color */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-logo-img {
+    height: 75px; /* Adjust logo size */
+    width: auto;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: rgb(194, 136, 0); /* Blue color on hover */
+}
+
+/* Social Media Icons Styling */
+.footer-social ul {
+    display: flex;
+    justify-content: space-around;
+    width: 200px; /* Space out the icons */
+}
+
+.footer-social ul li {
+    margin: 0;
+}
+
+.footer-social ul li a img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social ul li a:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Bottom Section Styling */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgb(63, 63, 63); /* Lighter text color for bottom section */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* For tablets and smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo-img {
+        height: 50px; /* Adjust logo size on smaller screens */
+    }
+
+    .footer-social ul {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-links ul {
+        margin-top: 20px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices */
+    .footer-container {
+        padding: 20px;
+    }
+
+    .footer-logo-img {
+        height: 40px; /* Further reduce logo size on mobile */
+    }
+
+    .footer-links ul li a {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .footer-social ul {
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+    .footer-social ul li a img {
+        width: 20px; /* Smaller social icons on mobile */
+        height: 20px;
+    }
+}
+
+/* Resize all Font Awesome icons */
+i.fab, i.fas {
+    font-size: 30px;  /* Set the font size */
+	margin-right: 20px; /* Add space between icons */
+}
+
+

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Hub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<link href="assets/css/fontawesome/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="assets/img/logo.png" alt="My Logo" class="logo-img"></a>
+            <span class="company-name">Property Hub</span>
+        </div>
+
+        <!-- Desktop Navbar -->
+        <nav class="navbar desktop-navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#why-choose-us">About</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navbar (Hidden by default) -->
+        <nav class="navbar mobile-navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#why-choose-us">About</a></li>
+                <li><a href="properties.html">Properties</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="hero-banner">
+        <img src="assets/img/banner.jpg" alt="Hero Image" class="hero-image">
+        <div class="hero-content">
+            <h1>Find Your Perfect Home Today</h1>
+            <p>Explore the Best Listings, Tailored Just for You.</p>
+        </div>
+    </section>
+
+    <!-- Search Bar (Moved here below the Hero Banner) -->
+    <div class="search-container">
+    <input type="text" id="search" placeholder="Search...">
+    <button type="button" onclick="performSearch()">Search</button>
+</div>
+
+<div id="search-results"></div>
+
+
+    <!-- New Listing Section -->
+<div class="new-listing">
+    <h2>Featured Listings</h2>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="properties/newlistings/property001/property001.jpg" alt="Image 1" class="thumbnail" onclick="openModal(this)">
+            <div class="property-details">
+                <p><strong>Price:</strong> R 480,500</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="properties/newlistings/property002/property002.jpg" alt="Image 2" class="thumbnail" onclick="openModal(this)">
+            <div class="property-details">
+                <p><strong>Price:</strong> R 750,000</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="properties/newlistings/property003/property003.jpg" alt="Image 3" class="thumbnail" onclick="openModal(this)">
+            <div class="property-details">
+                <p><strong>Price:</strong> R 1,750,000</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="properties/newlistings/property004/property004.jpg" alt="Image 4" class="thumbnail" onclick="openModal(this)">
+            <div class="property-details">
+                <p><strong>Price:</strong> R 600,000</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to Redirect to Full Property Page -->
+    <div class="view-more">
+        <a href="properties.html" class="btn-view-more">View All Properties</a>
+    </div>
+</div>
+
+
+    <section id="why-choose-us">
+        <div class="container">
+            <h2 class="section-heading">Why Choose Us</h2>
+            <p class="intro-text">We are committed to helping you find the perfect property. Here’s why we stand out:</p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Trusted Experts</h3>
+                    <p>Our team of experts is here to guide you through every step of your property journey.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Extensive Listings</h3>
+                    <p>We offer a wide range of properties that meet various budgets and preferences.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your satisfaction is our priority. We focus on your needs and ensure the best experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section class="testimonials">
+        <div class="testimonial-container">
+            <div class="testimonial-slide">
+                <p class="quote">"The service was amazing! I found my dream home within days!"</p>
+                <p class="author">- John Doe, Home Buyer</p>
+				⭐⭐⭐⭐☆ (4/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"Professional, efficient, and reliable. Highly recommended!"</p>
+                <p class="author">- Sarah Smith, Seller</p>
+				⭐⭐⭐☆☆ (3/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"I couldn’t have asked for a better experience. Great team!"</p>
+                <p class="author">- Mark Johnson, Investor</p>
+				⭐⭐☆☆☆ (2/5)
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"They helped me find exactly what I needed in my price range!"</p>
+                <p class="author">- Emily White, Renter</p>
+				⭐⭐⭐⭐⭐ (5/5)
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">&#10094;</button>
+            <button id="nextBtn" class="control-btn">&#10095;</button>
+        </div>
+    </section>
+	
+	<section id="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Please fill out the form below to get in touch.</p>
+    
+    <form action="submit_form.php" method="POST" class="contact-form">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Send Message</button>
+        </div>
+    </form>
+</section>
+
+    <!-- Modal for viewing large image and additional images -->
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <img id="modal-img" class="modal-content" src="" alt="Property Image">
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+            <div id="modal-description" class="modal-description"></div>
+        </div>
+    </div>
+	
+	<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/img/logo.png" alt="Company Logo" class="footer-logo-img">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#why-choose-us">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Property Hub. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
