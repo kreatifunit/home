@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendy Clothing Store - Stylish & Affordable Fashion</title>
+    <meta name="description" content="Discover the latest trends in fashion with Trendy Clothing Store. Shop a wide range of stylish and affordable clothing for men, women, and kids. Free shipping on orders over $50!">
+    <meta name="keywords" content="fashion, clothing, trendy outfits, affordable clothing, online shopping, men's fashion, women's fashion, kids' clothing, style trends">
+    <meta name="author" content="Your Brand Name">
+    <link rel="canonical" href="https://www.yourwebsite.com/">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com/">
+    <meta property="og:title" content="Trendy Clothing Store - Stylish & Affordable Fashion">
+    <meta property="og:description" content="Explore the latest trends in clothing. Shop stylish and affordable outfits for every occasion with free shipping on orders over $50.">
+    <meta property="og:image" content="https://www.yourwebsite.com/assets/img/logo.png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trendy Clothing Store - Stylish & Affordable Fashion">
+    <meta name="twitter:description" content="Discover the latest trends in affordable fashion with Trendy Clothing Store. Shop now and get free shipping on orders over $50!">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/assets/img/logo.png">
+	
+	<style>
+        #results { margin-top: 20px; }
+        .product { margin-bottom: 15px; display: flex; align-items: center; }
+        .product img { width: 70px; height: 70px; margin-right: 10px; }
+    </style
+	
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Trendy Clothing Store Logo" class="logo">
+        </a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+
+    
+    	<section>
+	<div class="slideshow-container">
+            <div class="slide fade">
+			<div class="overlay">
+                    <h1>Women</h1>
+                    <p>Elegance is the only beauty that never fades.</p>
+                    <a href="women.html" class="cta-button">Shop Now</a>
+                </div>
+                <img src="homepage/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+			<div class="overlay">
+                    <h1>Men</h1>
+                    <p>For the man who makes an impression.</p>
+                    <a href="men.html" class="cta-button">Shop Now</a>
+                </div>
+                <img src="homepage/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+			<div class="overlay">
+                    <h1>Accessories</h1>
+                    <p>Details matter. Elevate your style.</p>
+                    <a href="accessories.html" class="cta-button">Shop Now</a>
+                </div>
+                <img src="homepage/slide3.jpg" alt="Slide 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+		</section>
+		
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+			<li><a href="women.html">Women</a></li>
+			<li><a href="accessories.html">Accessories</a></li>
+			<li><a href="#featured-items">On Promotion</a></li>
+            <li><a href="#about-us">About</a></li>
+			<li><a href="#contactForm">Contact</a></li>
+            <li><a href="vacancies">Vacancies</a></li>
+			<li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+	
+	<div id="search-container">
+    <input type="text" id="search-input" placeholder="What are you looking for?...">
+    <button onclick="searchProducts()">Find</button>
+    <button id="clear-button" style="display: none;" onclick="clearResults()">Reset</button>
+</div>
+<div id="results"></div>
+	
+             <!-- Features Section -->
+        <section class="features">
+        <h2>Our Features</h2>
+        <div class="container">
+        <div class="feature-item">
+            <h3>New Arrival</h3>
+            <img src="homepage/products/newarrival.jpg" alt="Newaarival" class="feature-image">
+			<p>Say hello to your next favorite look. Fresh styles, must-have trends, are here to elevate your wardrobe. </p>
+        </div>
+        <div class="feature-item">
+            <h3>Custom Designs</h3>
+            <img src="homepage/products/customdesign.jpg" alt="Pants" class="feature-image">
+			<p>From unique ideas to one-of-a-kind creations, our custom designs let YOU express your style your way.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Sale</h3>
+			<a href="#featured-items">
+            <img src="homepage/products/promotions.jpg" alt="Sale" class="feature-image"></a>
+			<p>Your favorite styles are now up to 50% OFF! ✨ Don’t miss out on the trends you love at prices you’ll adore.</p>
+        </div>
+        </div>
+        </section>
+		
+		<!-- About-Us Section -->
+		 <section id="about-us" class="about-us">
+    <div class="container-about">
+      <div class="about-content">
+        <div class="about-img">
+          <img src="homepage/aboutus.jpg" alt="Our Team" />
+        </div>
+        <div class="about-text">
+          <h1>About Us</h1>
+          <p>
+            Welcome to <strong>Truwaer Clothing</strong>! We’re passionate about empowering individuals to express their unique personalities through fashion. From timeless classics to on-trend designs, every piece is curated with quality, comfort, and style in mind.
+          </p>
+          <p>
+            With a commitment to sustainability and ethical production, our goal is to ensure that every product not only enhances your wardrobe but aligns with our values of quality, responsibility, and innovation.
+          </p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+		<!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+  <div class="container-testimonials">
+    <h1>What Our Customers Say</h1>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"Truwaer Clothing has completely changed my style! The quality is amazing and the designs are so unique. Highly recommend!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I love how versatile their pieces are. They fit perfectly for any occasion, and I always get compliments!"</p>
+        <h4>- Mark R.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Fast shipping, amazing customer service, and beautiful clothing. I'm a customer for life!"</p>
+        <h4>- Emily S.</h4>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+</section>
+
+	<!-- Contact Section -->
+    <section class="promotion-heading">
+	<h1>Promotions</h1>
+	<p class="promotion-duration">Valid Until: <strong>Jan 31, 2024</strong></p>
+	</section>
+
+<section id="featured-items">
+    <div class="featured-items-container">
+        <div class="item" data-item-id="1">
+            <img src="homepage/Promotions/1.jpg" alt="Product 1" class="item-image">
+            <h2 class="item-name">NASA Cargo Pant Black</h2>
+            <p class="item-price"><s>R299.99</s> <strong>Now: R149.99</strong></p>
+            <button onclick="addToCart('NASA Cargo Pant Black', 149.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+
+        <div class="item" data-item-id="2">
+            <img src="homepage/Promotions/2.jpg" alt="Product 2" class="item-image">
+            <h2 class="item-name">Los Angeles Summer Wear</h2>
+            <p class="item-price"><s>R199.99</s> <strong>Now: R99.99</strong></p>
+            <button onclick="addToCart('Los Angeles Summer Wear', 99.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+
+        <div class="item" data-item-id="3">
+            <img src="homepage/Promotions/3.jpg" alt="Product 3" class="item-image">
+            <h2 class="item-name">Men African Pattern Golf Shirt</h2>
+            <p class="item-price"><s>R129.00</s> <strong>Now: R64.99</strong></p>
+            <button onclick="addToCart('Men African Pattern Golf Shirt', 64.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+
+        <div class="item" data-item-id="4">
+            <img src="homepage/Promotions/4.jpg" alt="Product 4" class="item-image">
+            <h2 class="item-name">3 in 1 Silver Bracelet Combo</h2>
+            <p class="item-price"><s>R59.99</s> <strong>Now: R29.99</strong></p>
+            <button onclick="addToCart('3 in 1 Silver Bracelet Combo', 29.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+
+        <div class="item" data-item-id="5">
+            <img src="homepage/Promotions/5.jpg" alt="Product 5" class="item-image">
+            <h2 class="item-name">Army Golf Shirt</h2>
+            <p class="item-price"><s>R89.99</s> <strong>Now: R44.99</strong></p>
+            <button onclick="addToCart('Army Golf Shirt', 44.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+
+        <div class="item" data-item-id="6">
+            <img src="homepage/Promotions/6.jpg" alt="Product 6" class="item-image">
+            <h2 class="item-name">Wizard's LED Ring</h2>
+            <p class="item-price"><s>R19.99</s> <strong>Now: R9.99</strong></p>
+            <button onclick="addToCart('Wizards LED Ring', 99.99)"  
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+		
+		<div class="item" data-item-id="6">
+            <img src="homepage/Promotions/7.jpg" alt="Product 7" class="item-image">
+            <h2 class="item-name">Gold Rings Range</h2>
+            <p class="item-price"><s>R149.99</s> <strong>Now: R74.99</strong></p>
+            <button onclick="addToCart('Gold Rings Range', 74.99)" 
+			
+            class="add-to-cart-button">Add to cart</button>
+        </div>
+    </div>
+</section>
+
+
+		<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Fill out the form below or connect with us on social media.</p>
+        
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Your Contact Number" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Your Address" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        <button type="button" class="btn" onclick="sendMessage()">Send Message</button>
+    </form>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h3>Connect with us</h3>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><img src="assets/img/icons/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="assets/img/icons/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="assets/img/icons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="assets/img/icons/youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+			<!-- FAQ Sectin -->
+	<h1>Frequently Asked Questions (FAQs)</h1>
+	<div id="faqs">
+    <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(0)">
+                <span>What is your return policy?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in their original packaging. Please contact customer service to initiate your return.
+            </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">
+                <span>How long does shipping take?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Standard delivery takes 3-5 business days. Expedited shipping options are available at checkout for faster delivery.
+            </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">
+                <span>Do you offer international shipping?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Yes, we offer international shipping to most countries. Shipping fees and estimated delivery times vary by location and will be shown during checkout.
+            </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">
+                <span>How can I track my order?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Once your order is shipped, you will receive a confirmation email with a tracking number and a link to track your package.
+            </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">
+                <span>Do you have physical store locations?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Yes, we have physical stores in select cities. Please visit our store locator page to find a store near you.
+            </div>
+        </div>
+    </div>
+	
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/slides.js"></script> 
+    <script src="assets/js/script.js"></script> 
+	
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trendy Clothing Store",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/assets/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-5555",
+    "contactType": "Customer Service",
+    "areaServed": "South Africa",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+
+
+    
+<footer>
+    <p>&copy; 2025 Truwear By <strong><a href="https://m.facebook.com/creativeunitstudioza/" style="color: white; text-decoration: none;">Kreatifunit Studio</a></strong></p>
+</footer>
+
+</body>
+</html>

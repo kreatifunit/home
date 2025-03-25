@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Fashion - Modern & Affordable Clothing | Trendy Clothing Store</title>
+    <meta name="description" content="Explore modern and affordable men's fashion at Trendy Clothing Store. Shop the latest trends in men's clothing, including casual, formal, and activewear styles.">
+    <meta name="keywords" content="men's fashion, men's clothing, affordable men's clothing, modern men's style, trendy outfits for men, casual men's clothing, formal men's wear, activewear for men">
+    <meta name="author" content="Your Brand Name">
+    <link rel="canonical" href="https://www.yourwebsite.com/men.html">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com/men.html">
+    <meta property="og:title" content="Men's Fashion - Modern & Affordable Clothing | Trendy Clothing Store">
+    <meta property="og:description" content="Discover the latest trends in modern and affordable men's fashion. Shop now and elevate your wardrobe with versatile styles.">
+    <meta property="og:image" content="https://www.yourwebsite.com/assets/img/mens-fashion.jpg">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Men's Fashion - Modern & Affordable Clothing | Trendy Clothing Store">
+    <meta name="twitter:description" content="Discover men's fashion trends with Trendy Clothing Store. Shop affordable casual, formal, and activewear options today.">
+    <meta name="twitter:image" content="https://www.yourwebsite.com/assets/img/mens-fashion.jpg">
+</head>
+
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+      <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+			<li><a href="women.html">Women</a></li>
+			<li><a href="accessories.html">Accessories</a></li>
+			<li><a href="index.html#featured-items">On Promotion</a></li>
+            <li><a href="index.html#about-us">About</a></li>
+			<li><a href="index.html#contactForm">Contact</a></li>
+            <li><a href="vacancies">Vacancies</a></li>
+			<li><a href="index.html#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+            <option value="Shirts">Shirts</option>
+			<option value="Jackets">Jackets</option>
+            <option value="Pants">Pants</option>
+			<option value="Shoes">Shoes</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Hats">Hats</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+        <section class="products">
+		
+		<!---PRODUCT 1--->
+    <div class="product" data-category="Jackets">
+    <img src="products/product1/1.jpg" alt="Product 1" class="product-image" id="productImage1">
+    <h3>Tan Biker Jacket</h3>
+    <p>R 1699.99</p>
+    <button class="view-button" onclick="document.getElementById('product1Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product1Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product1Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product1/1.jpg" alt="Product Image 1" onclick="document.getElementById('product1MainImage').src='products/product1/1.jpg'">
+    <img src="products/product1/2.jpg" alt="Product Image 2" onclick="document.getElementById('product1MainImage').src='products/product1/2.jpg'">
+    <img src="products/product1/1.jpg" alt="Product Image 3" onclick="document.getElementById('product1MainImage').src='products/product1/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product1MainImage" class="main-image" src="products/product1/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Tan Biker Jacket</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Uzzi</div>
+    <div class="product-price"><strong>R 1 699.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Tan Biker Jacket', 1669.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 2--->
+<div class="product" data-category="Shirts">
+    <img src="products/product2/1.jpg" alt="Product 2" class="product-image" id="productImage2">
+    <h3>Fuel Brown Back Print T-shirt</h3>
+    <p>R 349.99</p>
+    <button class="view-button" onclick="document.getElementById('product2Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 2 Modal -->
+	<div id="product2Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product2Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product2/1.jpg" alt="Product Image 1" onclick="document.getElementById('product2MainImage').src='products/product2/1.jpg'">
+    <img src="products/product2/2.jpg" alt="Product Image 2" onclick="document.getElementById('product2MainImage').src='products/product2/2.jpg'">
+    <img src="products/product2/1.jpg" alt="Product Image 3" onclick="document.getElementById('product2MainImage').src='products/product2/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product2MainImage" class="main-image" src="products/product2/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Fuel Brown Back Print T-shirt</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.
+	</div>
+    <div class="company-name"> Fuel</div>
+    <div class="product-price"><strong>R 349.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Fuel Brown Back Print T-shirt', 349.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+		
+		<!---PRODUCT 3--->
+	<div class="product" data-category="Shirts">
+    <img src="products/product3/1.jpg" alt="Product 3" class="product-image" id="productImage3">
+    <h3>Fuel Black Shirt</h3>
+    <p>R 289.99</p>
+    <button class="view-button" onclick="document.getElementById('product3Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product3Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product3Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product3/1.jpg" alt="Product Image 1" onclick="document.getElementById('product3MainImage').src='products/product3/1.jpg'">
+    <img src="products/product3/2.jpg" alt="Product Image 2" onclick="document.getElementById('product3MainImage').src='products/product3/2.jpg'">
+    <img src="products/product3/1.jpg" alt="Product Image 3" onclick="document.getElementById('product3MainImage').src='products/product3/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product3MainImage" class="main-image" src="products/product3/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Fuel Black Shirt</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Fuel</div>
+    <div class="product-price"><strong>R 289.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Fuel Black Shirt', 289.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+		
+		<!---PRODUCT 4--->
+<div class="product" data-category="Shoes">
+    <img src="products/product4/1.jpg" alt="Product 4" class="product-image" id="productImage4">
+    <h3>Daniel Hector Sneakers</h3>
+    <p>R 799.99</p>
+    <button class="view-button" onclick="document.getElementById('product4Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product4Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product4Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product4/1.jpg" alt="Product Image 1" onclick="document.getElementById('product4MainImage').src='products/product4/1.jpg'">
+    <img src="products/product4/2.jpg" alt="Product Image 2" onclick="document.getElementById('product4MainImage').src='products/product4/2.jpg'">
+    <img src="products/product4/3.jpg" alt="Product Image 3" onclick="document.getElementById('product4MainImage').src='products/product4/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product4MainImage" class="main-image" src="products/product4/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Daniel Hector Sneakers</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Daniel Hector</div>
+    <div class="product-price"><strong>R 799.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Daniel Hector Sneakers', 799.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 5--->
+	<div class="product" data-category="Accessories">
+    <img src="products/product5/1.jpg" alt="Product 5" class="product-image" id="productImage5">
+    <h3>Rulph's Club Perfume</h3>
+    <p>R 1 799.99</p>
+    <button class="view-button" onclick="document.getElementById('product5Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product5Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product5Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product5/1.jpg" alt="Product Image 1" onclick="document.getElementById('product5MainImage').src='products/product5/1.jpg'">
+    <img src="products/product5/2.jpg" alt="Product Image 2" onclick="document.getElementById('product5MainImage').src='products/product5/2.jpg'">
+    <img src="products/product5/3.jpg" alt="Product Image 3" onclick="document.getElementById('product5MainImage').src='products/product5/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product5MainImage" class="main-image" src="products/product5/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Rulph's Club Perfume</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Rulph</div>
+    <div class="product-price"><strong>R 1 799.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Rulphs Club Perfume', 1799.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+		
+		<!---PRODUCT 6--->
+<div class="product" data-category="Jackets">
+    <img src="products/product6/1.jpg" alt="Product 6" class="product-image" id="productImage6">
+    <h3>Men Jean Jacket</h3>
+    <p>R 649.99</p>
+    <button class="view-button" onclick="document.getElementById('product6Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product6Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product6Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product6/1.jpg" alt="Product Image 1" onclick="document.getElementById('product6MainImage').src='products/product6/1.jpg'">
+    <img src="products/product6/2.jpg" alt="Product Image 2" onclick="document.getElementById('product6MainImage').src='products/product6/2.jpg'">
+    <img src="products/product6/3.jpg" alt="Product Image 3" onclick="document.getElementById('product6MainImage').src='products/product6/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product6MainImage" class="main-image" src="products/product6/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Men Jean Jacket</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 649.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Men Jean Jacket', 649.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 7--->
+<div class="product" data-category="Shoes">
+    <img src="products/product7/1.jpg" alt="Product 7" class="product-image" id="productImage7">
+    <h3>Grey Puma Sneaker</h3>
+    <p>R 899.99</p>
+    <button class="view-button" onclick="document.getElementById('product7Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product7Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product7Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product7/1.jpg" alt="Product Image 1" onclick="document.getElementById('product7MainImage').src='products/product7/1.jpg'">
+    <img src="products/product7/2.jpg" alt="Product Image 2" onclick="document.getElementById('product7MainImage').src='products/product7/2.jpg'">
+    <img src="products/product7/3.jpg" alt="Product Image 3" onclick="document.getElementById('product7MainImage').src='products/product7/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product7MainImage" class="main-image" src="products/product7/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Grey Puma Sneaker</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Puma</div>
+    <div class="product-price"><strong>R 899.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Grey Puma Sneaker', 899.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 8--->
+<div class="product" data-category="Shoes">
+    <img src="products/product8/1.jpg" alt="Product 8" class="product-image" id="productImage8">
+    <h3>Black Uzzi Sneaker</h3>
+    <p>R 1299.99</p>
+    <button class="view-button" onclick="document.getElementById('product8Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product8Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product8Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product8/1.jpg" alt="Product Image 1" onclick="document.getElementById('product8MainImage').src='products/product8/1.jpg'">
+    <img src="products/product8/2.jpg" alt="Product Image 2" onclick="document.getElementById('product8MainImage').src='products/product8/2.jpg'">
+    <img src="products/product8/3.jpg" alt="Product Image 3" onclick="document.getElementById('product8MainImage').src='products/product8/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product8MainImage" class="main-image" src="products/product8/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Black Uzzi Sneaker</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Uzzi</div>
+    <div class="product-price"><strong>R 1 299.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Black Uzzi Sneaker', 1299.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 9--->
+    <div class="product" data-category="Pants">
+    <img src="products/product9/1.jpg" alt="Product 9" class="product-image" id="productImage9">
+    <h3>Uzzi Man Short</h3>
+    <p>R 599.99</p>
+    <button class="view-button" onclick="document.getElementById('product9Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product9Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product9Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product9/1.jpg" alt="Product Image 1" onclick="document.getElementById('product9MainImage').src='products/product9/1.jpg'">
+    <img src="products/product9/2.jpg" alt="Product Image 2" onclick="document.getElementById('product9MainImage').src='products/product9/2.jpg'">
+    <img src="products/product9/1.jpg" alt="Product Image 3" onclick="document.getElementById('product9MainImage'n).src='products/product9/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product9MainImage" class="main-image" src="products/product9/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Uzzi Man Short</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Uzzi</div>
+    <div class="product-price"><strong>R 599.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Uzzi Man Short', 599.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+	
+		<!---PRODUCT 10--->
+<div class="product" data-category="Accessories">
+    <img src="products/product10/1.jpg" alt="Product 10" class="product-image" id="productImage10">
+    <h3>Truwear Leather Wallet</h3>
+    <p>R 399.99</p>
+    <button class="view-button" onclick="document.getElementById('product10Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product10Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product10Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product10/1.jpg" alt="Product Image 1" onclick="document.getElementById('product10MainImage').src='products/product10/1.jpg'">
+    <img src="products/product10/2.jpg" alt="Product Image 2" onclick="document.getElementById('product10MainImage').src='products/product10/2.jpg'">
+    <img src="products/product10/3.jpg" alt="Product Image 3" onclick="document.getElementById('product10MainImage').src='products/product10/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product10MainImage" class="main-image" src="products/product10/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Truwear Leather Wallet</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 399.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Truwear Leather Wallet', 399.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 11--->
+	<div class="product" data-category="Jackets">
+    <img src="products/product11/1.jpg" alt="Product 11" class="product-image" id="productImage11">
+    <h3>Truwear Leather Jacket</h3>
+    <p>R 1 999.99</p>
+    <button class="view-button" onclick="document.getElementById('product11Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product11Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product11Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product11/1.jpg" alt="Product Image 1" onclick="document.getElementById('product11MainImage').src='products/product11/1.jpg'">
+    <img src="products/product11/2.jpg" alt="Product Image 2" onclick="document.getElementById('product11MainImage').src='products/product11/2.jpg'">
+    <img src="products/product11/1.jpg" alt="Product Image 3" onclick="document.getElementById('product11MainImage').src='products/product11/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product11MainImage" class="main-image" src="products/product11/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Truwear Leather Jacket</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 1 999.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Truwear Leather Jacket', 1999.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 12--->
+<div class="product" data-category="Jackets">
+    <img src="products/product12/1.jpg" alt="Product 12" class="product-image" id="productImage12">
+    <h3>Daniel Hector Winter Jacket</h3>
+    <p>R 999.99</p>
+    <button class="view-button" onclick="document.getElementById('product12Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product12Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product12Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product12/1.jpg" alt="Product Image 1" onclick="document.getElementById('product12MainImage').src='products/product12/1.jpg'">
+    <img src="products/product12/2.jpg" alt="Product Image 2" onclick="document.getElementById('product12MainImage').src='products/product12/2.jpg'">
+    <img src="products/product12/1.jpg" alt="Product Image 3" onclick="document.getElementById('product12MainImage').src='products/product12/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product12MainImage" class="main-image" src="products/product12/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Daniel Hector Winter Jacket</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Daniel Hector</div>
+    <div class="product-price"><strong>R 999.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Daniel Hector Winter Jacket', 999.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 13--->
+	<div class="product" data-category="Pants">
+    <img src="products/product13/1.jpg" alt="Product 13" class="product-image" id="productImage13">
+    <h3>Denim Dark Grey Jean</h3>
+    <p>R 599.99</p>
+    <button class="view-button" onclick="document.getElementById('product13Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product13Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product13Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product13/1.jpg" alt="Product Image 1" onclick="document.getElementById('product13MainImage').src='products/product13/1.jpg'">
+    <img src="products/product13/2.jpg" alt="Product Image 2" onclick="document.getElementById('product13MainImage').src='products/product13/2.jpg'">
+    <img src="products/product13/1.jpg" alt="Product Image 3" onclick="document.getElementById('product13MainImage').src='products/product13/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product13MainImage" class="main-image" src="products/product13/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Denim Dark Grey Jean</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 599.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Denim Dark Grey Jean', 599.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+
+		<!---PRODUCT 14--->
+<div class="product" data-category="Hats">
+    <img src="products/product14/1.jpg" alt="Product 14" class="product-image" id="productImage14">
+    <h3>Uzzi Army Bucket Hat</h3>
+    <p>R 249.99</p>
+    <button class="view-button" onclick="document.getElementById('product14Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product14Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product14Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product14/1.jpg" alt="Product Image 1" onclick="document.getElementById('product14MainImage').src='products/product14/1.jpg'">
+    <img src="products/product14/2.jpg" alt="Product Image 2" onclick="document.getElementById('product14MainImage').src='products/product14/2.jpg'">
+    <img src="products/product14/3.jpg" alt="Product Image 3" onclick="document.getElementById('product14MainImage').src='products/product14/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product14MainImage" class="main-image" src="products/product14/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Uzzi Army Bucket Hat</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 249.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Uzzi Army Bucket Hat', 249.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 15--->
+<div class="product" data-category="Accessories">
+    <img src="products/product15/1.jpg" alt="Product 15" class="product-image" id="productImage15">
+    <h3>Truwear Men Sidebag</h3>
+    <p>R 299.99</p>
+    <button class="view-button" onclick="document.getElementById('product15Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product15Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product15Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product15/1.jpg" alt="Product Image 1" onclick="document.getElementById('product15MainImage').src='products/product15/1.jpg'">
+    <img src="products/product15/2.jpg" alt="Product Image 2" onclick="document.getElementById('product15MainImage').src='products/product15/2.jpg'">
+    <img src="products/product15/1.jpg" alt="Product Image 3" onclick="document.getElementById('product15MainImage').src='products/product15/1.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product15MainImage" class="main-image" src="products/product15/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Truwear Men Sidebag</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 299.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Truwear Men Sidebag', 299.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+
+		<!---PRODUCT 16--->
+<div class="product" data-category="Jackets">
+    <img src="products/product16/1.jpg" alt="Product 16" class="product-image" id="productImage16">
+    <h3>The Gentlemen Suit</h3>
+    <p>R 1299.99</p>
+    <button class="view-button" onclick="document.getElementById('product16Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product16Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product16Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/product16/1.jpg" alt="Product Image 1" onclick="document.getElementById('product16MainImage').src='products/product16/1.jpg'">
+    <img src="products/product16/2.jpg" alt="Product Image 2" onclick="document.getElementById('product16MainImage').src='products/product16/2.jpg'">
+    <img src="products/product16/3.jpg" alt="Product Image 3" onclick="document.getElementById('product16MainImage').src='products/product16/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product16MainImage" class="main-image" src="products/product16/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">The Gentlemen Suit</div>
+    <div class="product-description">Elevate your everyday wardrobe with the Classic Essential Organic Clothing.</div>
+    <div class="company-name"> Truwear Brands</div>
+    <div class="product-price"><strong>R 1 299.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('The Gentlemen Suit', 1299.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+
+
+</section>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+
+    <script src="assets/js/script.js"></script>
+	
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trendy Clothing Store",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/assets/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-5555",
+    "contactType": "Customer Service",
+    "areaServed": "South Africa",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+    
+<footer>
+    <p>&copy; 2025 Truwear By <strong><a href="https://m.facebook.com/creativeunitstudioza/" style="color: white; text-decoration: none;">Kreatifunit Studio</a></strong></p>
+</footer>
+</body>
+</html>
