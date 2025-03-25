@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Request Eat - Home</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+	<link rel="stylesheet" href="assets/css/products.css">
+	<style>
+	
+#searchBar {
+    width: 90%;
+    max-width: 180px;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 10px auto;
+    margin-top: 4vh;
+}
+
+#searchBar:focus {
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Add a search icon inside */
+.search-container {
+    position: relative;
+    width: fit-content;
+    margin: 10px auto;
+}
+
+.search-container i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+#searchBar {
+    padding-left: 40px; /* Space for icon */
+}
+/* General container styling */
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual product box */
+.product {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Link styling */
+.product a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 15px;
+}
+
+/* Product image */
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+/* Product title */
+.product h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Price */
+.product p {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+/* Category and Brand */
+.product p strong {
+    color: #555;
+}}
+
+</style>
+	
+	
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Trendy Clothing Store Logo" class="logo">
+        </a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+    <!-- Cart Popup Notification -->
+<div id="cart-popup" class="cart-popup">
+    <p id="cart-message"></p>
+    <div class="cart-popup-buttons">
+        <button onclick="viewCart()">View Cart</button>
+        <button onclick="closeCartPopup()">Continue Shopping</button>
+    </div>
+</div>
+
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="shop.html">Shop</a></li>
+			<li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+			<li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+    </nav>
+    
+	<!--Carousel Container-->
+	<div class="carousel-container">
+    <div class="shortcut-bar">
+	<!--Shop Category-->
+	<a href="shop.html" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/0.png" alt="shop">
+        <span>Shop</span>
+    </a>
+	<!--Restaurant Category-->
+    <a href="restaurant.html" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/15.png" alt="restaurant">
+        <span>Restaurant</span>
+    </a>
+	<!--Grocery Category-->
+    <a href="shop.html?filter=grocery" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/1.png" alt="All">
+        <span>Grocery</span>
+    </a>
+	<!--Liquor Category-->
+        <a href="shop.html?filter=liquor" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/2.png" alt="Liquor">
+        <span>Liquor</span>
+    </a>
+	<!--Baby Category-->
+    <a href="shop.html?filter=baby" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/3.png" alt="Baby">
+        <span>Baby</span>
+    </a>
+	<!--Meat & Poultry Category-->
+    <a href="shop.html?filter=meat" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/4.png" alt="Meat">
+        <span>Meat</span>
+    </a>
+    <!--Snack Category-->
+    <a href="shop.html?filter=snack" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/5.png" alt="Snack">
+        <span>Snack</span>
+    </a>
+    <!--Cupboard Foods Category-->
+    <a href="shop.html?filter=cupboard" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/6.png" alt="Cupboard">
+        <span>Cupboard Food</span>
+    </a>
+	<!--Spices Category-->
+    <a href="shop.html?filter=spices&soup" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/7.png" alt="Spices&Soup">
+        <span>Spices & Soup</span>
+    </a>
+	<!--Breakfast Category-->
+    <a href="shop.html?filter=breakfast" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/8.png" alt="Breakfast">
+        <span>Breakfast</span>
+    </a>
+	<!--Coffee&Tea Category-->
+    <a href="shop.html?filter=coffee&tea" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/9.png" alt="Coffee&Tea">
+        <span>Coffee & Tea</span>
+    </a>
+	<!--Dairy Category-->
+    <a href="shop.html?filter=dairy" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/10.png" alt="Dairy">
+        <span>Dairy</span>
+    </a>
+	<!--Medication Category-->
+    <a href="shop.html?filter=medication" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/11.png" alt="Medication">
+        <span>Medication</span>
+    </a>
+	<!--Fruits & Veg Category-->
+    <a href="shop.html?filter=fruits&veg" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/12.png" alt="fruits&veg">
+        <span>Fruits & Veg</span>
+    </a>
+	<!--Dairy Category-->
+    <a href="shop.html?filter=spread&butter" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/13.png" alt="spread">
+        <span>Spread & Butter</span>
+    </a>
+	<!--Flour & Baking Category-->
+    <a href="shop.html?filter=flour&baking" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/14.png" alt="spread">
+        <span>Flour & Baking</span>
+    </a>
+    </div>
+  </div>
+  
+    <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+    <div id="product-container"></div>
+
+    <main>
+	
+ <!---PROMOTIONAL CONTAINER SECTION---> 
+<div class="headings">
+    <h4>Specials</h4></div>
+    
+<section class="promotional">
+    <div class="promotional-container">
+    <div class="menu-item">
+    <img src="products/promotions/1.jpg" alt="Pie">
+    <h3>Steak & Chips</h3>
+    <p>
+Sink your teeth into a perfectly grilled, juicy steak, paired with golden, crispy chips for the ultimate comfort meal!</p>
+<h4 class="promo-price">
+    <s>R124.99</s> <strong>Now: R99.99</strong> 
+    <button onclick="addToCart('Steak & Chips', 99.99)" style="border: none; background: none; cursor: pointer; margin-left: 100px; padding: 0;">
+        <img src="assets/img/icons/addtocart.png" alt="Cart" style="width: 35px; height: 35px;">
+        </button>
+        </h4>
+     </div>
+     
+         <div class="menu-item">
+    <img src="products/promotions/2.jpg" alt="Pie">
+    <h3>Juice Slush Combo</h3>
+    <p>Double the chill, double the thrill! Refresh yourself with an icy, flavor-packed slush and get another one absolutely FREE.</p>
+<h4 class="promo-price">
+    <s>R69.99</s> <strong>Now: R34.99</strong> 
+    <button onclick="addToCart('Juice Slush Combo', 34.99)" style="border: none; background: none; cursor: pointer; margin-left: 100px; padding: 0;">
+        <img src="assets/img/icons/addtocart.png" alt="Cart" style="width: 35px; height: 35px;">
+        </button>
+        </h4>
+     </div>
+     
+         <div class="menu-item">
+    <img src="products/promotions/3.jpg" alt="Pie">
+    <h3>Beef Grilled Burger</h3>
+    <p>Sink your teeth into a perfectly grilled beef burger, stacked with fresh toppings and a soft bun. Don’t miss this limited-time special!
+</p>
+<h4 class="promo-price">
+    <s>R79.99</s> <strong>Now: R59.99</strong> 
+    <button onclick="addToCart('Beef Grilled Burger', 59.99)" style="border: none; background: none; cursor: pointer; margin-left: 100px; padding: 0;">
+        <img src="assets/img/icons/addtocart.png" alt="Cart" style="width: 35px; height: 35px;">
+        </button>
+        </h4>
+     </div>
+     
+         <div class="menu-item">
+    <img src="products/promotions/4.jpg" alt="Pie">
+    <h3>Grilled Chicken 1/4 Meal</h3>
+    <p>Tender, juicy grilled chicken paired with creamy mashed potatoes for the perfect comfort meal. Fresh, flavorful, and made just for you!</p>
+<h4 class="promo-price">
+    <s>R64.99</s> <strong>Now: R44.99</strong> 
+    <button onclick="addToCart('Grilled Checken 1/4', 44.99)" style="border: none; background: none; cursor: pointer; margin-left: 100px; padding: 0;">
+        <img src="assets/img/icons/addtocart.png" alt="Cart" style="width: 35px; height: 35px;">
+        </button>
+        </h4>
+     </div>
+     
+         <div class="menu-item">
+    <img src="products/promotions/5.jpg" alt="Pie">
+    <h3>Pizza Deal</h3>
+    <p>
+Enjoy a delicious pizza with crispy chicken pops and a refreshing 300ml Coke. A perfect trio for a satisfying meal
+</p>
+<h4 class="promo-price">
+    <s>R89.99</s> <strong>Now: R64.99</strong> 
+    <button onclick="addToCart('Pizza Deal', 64.99)" style="border: none; background: none; cursor: pointer; margin-left: 100px; padding: 0;">
+        <img src="assets/img/icons/addtocart.png" alt="Cart" style="width: 35px; height: 35px;">
+        </button>
+        </h4>
+     </div>
+    </div>
+</section>
+
+ <!---STORES CONTAINER SECTION--->
+ <div class="headings">
+    <h4>Popular Stores</h4>
+    <p>We deliver only within the store’s location range. Before ordering, check if this store is within your delivery area. 5km maximum</p></div>
+    
+<section class="promotional">
+    <div class="promotional-container">
+    <!---KFC--->    
+    <div class="menu-item">
+ <a href="store_02.html">
+    <img src="assets/img/thumbnails/1.jpg">
+    </a><p>
+"Enjoy your KFC, hot and fresh! Finger-lickin’ goodness on the way – expected to arrive in an hour!"
+</p>
+<h4 class="promo-price">
+    <button onclick="addToCart" style="border: none; background: none; cursor: pointer; margin-left: 1px; padding: 0;">
+        <img src="assets/img/icons/delivery.png" alt="Cart" style="width: 25px; height: 25px;">
+        </button>
+    <strong>Fee: R15.00</strong>
+        </h4></div>
+     
+    <!---Chicken Licken--->    
+    <div class="menu-item">
+ <a href="store_01.html">
+    <img src="assets/img/thumbnails/2.jpg">
+    </a><p>
+"Enjoy your Chicken Licken, hot and crispy! Soulful flavor delivered straight to you. Expected to arrive in an hour!"
+<h4 class="promo-price">
+    <button onclick="addToCart" style="border: none; background: none; cursor: pointer; margin-left: 1px; padding: 0;">
+        <img src="assets/img/icons/delivery.png" alt="Cart" style="width: 25px; height: 25px;">
+        </button>
+    <strong>Fee: R15.00</strong>
+        </h4></div>
+
+    <!---kingpie--->    
+    <div class="menu-item">
+ <a href="store_03.html">
+    <img src="assets/img/thumbnails/3.jpg">
+    </a><p>
+"Enjoy your Chicken Licken, hot and crispy! Soulful flavor delivered straight to you. Expected to arrive in an hour!"
+<h4 class="promo-price">
+    <button onclick="addToCart" style="border: none; background: none; cursor: pointer; margin-left: 1px; padding: 0;">
+        <img src="assets/img/icons/delivery.png" alt="Cart" style="width: 25px; height: 25px;">
+        </button>
+    <strong>Fee: R15.00</strong>
+        </h4></div>
+     
+     
+    </div>
+</section>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+<script>
+// Load external script dynamically
+const script = document.createElement("script");
+script.src = "products/products.js"; // Ensure this file is correctly hosted
+script.onload = function () {
+    console.log("Products loaded:", products);
+};
+document.body.appendChild(script);
+
+function displayProducts(productsList) {
+    const container = document.getElementById("product-container");
+    container.innerHTML = ""; // Clear previous results
+
+    productsList.forEach(product => {
+        container.innerHTML += `
+            <div class="product">
+                <a href="product.html?id=${product.id}">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>R${product.price}</p>
+                    <p><strong>Category:</strong> ${product.category}</p>
+                    <p><strong>Brand:</strong> ${product.brand}</p>
+                </a>
+            </div>
+        `;
+    });
+}
+
+function searchProducts() {
+    const query = document.getElementById("searchBar").value.toLowerCase();
+
+    if (query === "") {
+        document.getElementById("product-container").innerHTML = "";
+        return;
+    }
+
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(query) ||
+        product.brand.toLowerCase().includes(query) ||
+        product.category.toLowerCase().includes(query)
+    );
+
+    displayProducts(filteredProducts);
+}
+</script>
+    </script>
+    
+    <script src="assets/js/slides.js"></script> 
+    <script src="assets/js/script.js"></script> 
+	
+<footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/icons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="#searchBar" class="footer-icon">
+            <img src="assets/img/icons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+		<a href="shop.html" class="footer-icon">
+            <img src="assets/img/icons/store.png" alt="store">
+            <span>Store</span>
+        </a>
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/icons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a> 
+    </div>
+</footer>
+
+</body>
+</html>

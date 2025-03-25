@@ -1,0 +1,666 @@
+/*---SHOP.HTML EDIT SECTION---*/
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    gap: 20px;
+    padding: 20px;
+	margin-top: 10px; /* Adjust margin to match header height */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    #product-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    }
+    
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.product:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.2em; /* Adjust height for 2 lines */
+    line-height: 1.6em; /* Adjust line height */
+    font-size: 15px;
+}
+
+.product h5 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.2em; /* Adjust height for 2 lines */
+    line-height: 1.6em; /* Adjust line height */
+    font-size: 11px;
+	color: grey;
+	font-weight: bold;
+}
+
+.product p {
+    font-size: 25px;
+	color: black;
+	font-weight: bold;
+}
+
+./* Responsive adjustments */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/*---Product Status---*/
+.status-available {
+	display: flex;
+	justify-content: center;
+	color: green;
+}
+
+.status-sold {
+	display: flex;
+	justify-content: center;
+	color: red;
+}
+
+.shop-ui {
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+}
+
+/* Media Query for Desktop - set image to 300px */
+@media (min-width: 768px) {
+    .product-image {
+        height: 310px;
+        width: 310px;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .product {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+
+
+
+/*---SHOP SEARCH SECTION---*/
+.search-filter {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 15vh;
+    margin-bottom: 0vh;
+}
+
+#searchInput {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#categoryFilter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#search-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/*---PRODUCT MODAL SECTION---*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+     align-items: center;
+    }
+
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      width: 60%;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .product-images {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .product-images img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .main-image {
+	  width: 75%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 20px;
+	  padding: 0;
+    }
+
+@media (max-width: 768px) {
+  .main-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-images img {
+    width: 55px;
+	height: 55px;
+  }
+}
+
+
+    .product-info {
+      margin-top: 20px;
+    }
+
+    .product-name {
+      font-size: 24px;
+      font-weight: bold;
+	  color: green;
+    }
+
+    .product-description {
+      font-size: 11px;
+      margin-top: 10px;
+      color: grey;
+    }
+
+    .company-name {
+      display: none; 
+      font-size: 18px;
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .product-price {
+      font-size: 19px;
+      color: black;
+      margin-top: 10px;
+    }
+
+ .view-button {
+  background-color: #047f10; /* Blue button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-button:hover {
+  background-color: grey; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.view-button:active {
+  transform: translateY(1px);
+}
+
+ .add-to-cart-button {
+  background-color: #047f10; /* Blue button background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: grey; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.add-to-cart-button:active {
+  transform: translateY(1px);
+}
+
+.cart-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c3c3c3;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 100000;
+}
+.cart-popup p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart-popup-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.cart-popup-buttons button {
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-popup-buttons button:first-child {
+    background: #047f10;
+    color: white;
+}
+
+.cart-popup-buttons button:last-child {
+    background: #49ba54;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*---CART MODAL---*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+	max-width: auto;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close-button {
+    background-color: #047f10; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding around the text */
+    text-align: center; /* Centered text */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: grey;/* Darker red on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Cart items and summary */
+.cart-summary {
+    margin-top: 20px;
+}
+
+.cart-total {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Checkout form */
+.billing-address input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.payment-methods label {
+    display: block;
+    margin-bottom: 5px;
+}
+      
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.cart-item-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.cart-item-name {
+    flex-grow: 1;  /* This ensures the name takes available space */
+}
+
+.quantity-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;  /* Set a fixed width for the buttons */
+    height: 30px; /* Set a fixed height for uniform buttons */
+    font-size: 16px; /* Optional: change font size if needed */
+    margin: 0 5px; /* Space between buttons */
+    padding: 0;
+    cursor: pointer;
+}
+
+.cart-item-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.cart-item-buttons button {
+    padding: 5px 10px;
+}
+
+.cart-button {
+    background-color: #047f10; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0; /* Add some space between buttons */
+    width: calc(100% - 20px); /* Full width with padding */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #047f10;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color:grey;
+}
+
+/*---CONTACT FORM---*/
+.contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container {
+    margin: 20px 0;
+    text-align: center;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+	margin-bottom: 50px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #047f10;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: grey;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-media h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media ul li {
+    display: inline-block;
+}
+
+.social-media ul li a img {
+    width: 40px;  /* Set the size of the social media icons */
+    height: auto;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.social-media ul li a:hover img {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/*---FOOTER SECTION---*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000; /* Keeps footer above other content */
+}
+
+/* Footer icons container */
+.footer-icons {
+    display: flex;
+    gap: 50px;
+}
+
+/* Individual icon styling */
+.footer-icon img {
+    width: 37px;
+    height: 37px;
+    transition: opacity 0.3s;
+}
+
+.footer-icon img:hover {
+    opacity: 0.8;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing as needed */
+}
+
+.footer-icon {
+    text-align: center; /* Center align text under icons */
+    color: black; /* Change to desired text color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer-icon span {
+    display: block; /* Ensure the span is block-level */
+    margin-top: 5px; /* Space between icon and title */
+    font-size: 8px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 10px 5px;
+    }
+    
+    .footer-icons {
+        gap: 50px;
+    }
+    
+    .footer-icon img {
+        width: 33px;
+        height: 33px;
+    }
+}
